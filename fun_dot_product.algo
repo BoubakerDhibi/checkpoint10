@@ -1,0 +1,44 @@
+FUNCTION dot_product(v1,v2: ARRAY_OF INTEGER[50]): INTEGER
+VAR
+    i : INTEGER
+    ps: FLOAT:=0
+BEGIN
+
+    FOR i FROM 0 TO v1.length DO
+        ps := ps + v1[i] * v2[i];
+        END_FOR
+        RETURN ps;
+        IF (ps==0) THEN
+            Write ("v1 and v2 are orthogonal")
+        ELSE
+            Write("v1 and v2 are not orthogonal")
+        END_IF
+    END_FOR
+END
+
+
+
+
+ALGORITHM algo_dot
+VAR
+    v1 , v2 : ARRAY_OF INTEGER[50];
+    i: INTEGER;
+    ps:= FLOAT= 0
+BEGIN
+    Write(v1);
+    read(v1);
+    FOR i FROM 0 TO length_v1 STEP 1  DO
+        read (v1[i])
+    END_FOR
+    Write(v2);
+    Read(v2);
+    FOR i FROM 0 TO n2 DO
+        Read(V2[i])
+    END_FOR
+    ps:= dot_product(v1,v2)
+    IF (ps = 0) THEN
+        Write("v1 and v2 are orthogonal");
+    ELSE
+        Write("v1 and v2 are not orthogonal");
+    END_IF
+END
